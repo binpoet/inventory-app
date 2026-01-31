@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="dark_red">#B71C1C</color>
+
+    <!-- Screen Colors -->
+    <color name="login_subtitle_color">#666666</color>
+    <color name="input_background">#F5F5F5</color>
+    <color name="input_hint_color">#999999</color>
+    <color name="input_text_color">#212121</color>
+    <color name="input_icon_color">#FF0000</color>
+    <color name="forgot_password_color">#FF0000</color>
+    <color name="button_background">#FF0000</color>
+    <color name="welcome_text_color">#212121</color>
+</resources>

@@ -1,0 +1,31 @@
+# Gradle files
+.gradle/
+build/
+app/build/
+
+# IntelliJ/Android Studio files
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Local configuration
+local.properties
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Captures
+captures/
+
+# External Native Build
+.externalNativeBuild/
+.cxx/
+
+# Artifacts/Images
+rsa.png
+appstore.png

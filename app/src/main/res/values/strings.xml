@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RS&amp;A Gun Inventory</string>
+    <string name="welcome_message">Welcome to RS&amp;A Gun Inventory</string>
+    
+    <!-- Login Screen Strings -->
+    <string name="welcome_back">Welcome Back</string>
+    <string name="login_subtitle">Sign in to continue</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+</resources>
