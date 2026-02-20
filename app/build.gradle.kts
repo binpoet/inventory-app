@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.rsa.app"
-        minSdk = 24
+        minSdk = 26  // Zebra RFID SDK (API3_*) requires minSdk 26
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -39,11 +39,19 @@ android {
 }
 
 dependencies {
+    // Zebra RFID SDK for Android (RFIDAPI3) from Zebra_RFIDAPI3_SDK_2.0.5.238 – exclude barcode lib to avoid duplicate classes
+    implementation(fileTree(mapOf(
+        "dir" to "${rootProject.projectDir}/Zebra_RFIDAPI3_SDK_2.0.5.238",
+        "include" to listOf("API3_*.aar", "rfid*.aar"),
+        "exclude" to listOf("BarcodeScannerLibrary.aar")
+    )))
+
     // Core Android
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("com.airbnb.android:lottie:6.4.0")
 
     // ViewModel and LiveData
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
