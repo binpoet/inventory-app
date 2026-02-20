@@ -2,11 +2,23 @@
 <resources>
     <string name="app_name">RS&amp;A Gun Inventory</string>
     <string name="welcome_message">Welcome to RS&amp;A Gun Inventory</string>
-    
+
     <!-- Login Screen Strings -->
     <string name="welcome_back">Welcome Back</string>
     <string name="login_subtitle">Sign in to continue</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
+
+    <!-- RFID Home Screen -->
+    <string name="rfid_home_title">RFID Scanner</string>
+    <string name="rfid_epc_label">RFID EPC Value</string>
+    <string name="rfid_epc_placeholder">No tag read yet</string>
+    <string name="rfid_reader_disconnected">Reader: Disconnected</string>
+    <string name="rfid_reader_connected">Reader: Connected</string>
+    <string name="rfid_scanning">Scanning…</string>
+    <string name="rfid_start_scan">Start Scan</string>
+    <string name="rfid_stop_scan">Stop Scan</string>
+    <string name="rfid_open_scanner">Open RFID Scanner</string>
+    <string name="rfid_reader_not_available">RFID reader not available</string>
 </resources>
