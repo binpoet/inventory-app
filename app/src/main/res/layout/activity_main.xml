@@ -79,18 +79,78 @@
             android:layout_height="wrap_content"
             android:padding="24dp">
 
-            <TextView
-                android:id="@+id/tvWelcome"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/welcome_message"
-                android:textColor="@color/welcome_text_color"
-                android:textSize="16dp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
+            <!-- Lottie: how RFID works (replace raw/rfid_how_it_works.json with a LottieFiles NFC/scan animation if desired) -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieRfidHowItWorks"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                app:lottie_rawRes="@raw/rfid"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- RFID: simple scan animation (indeterminate progress) -->
+            <ProgressBar
+                android:id="@+id/progressRfidScan"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:indeterminate="true"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lottieRfidHowItWorks" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnRfidStartScan"
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:minWidth="180dp"
+                android:text="@string/rfid_start_scan"
+                app:backgroundTint="@color/button_background"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/progressRfidScan" />
+
+            <!-- EPC value when tag is read -->
+            <TextView
+                android:id="@+id/tvRfidEpcValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:minHeight="48dp"
+                android:padding="12dp"
+                android:textColor="@color/input_text_color"
+                android:textSize="14sp"
+                android:fontFamily="monospace"
+                android:visibility="gone"
+                tools:text="0000000000000001"
+                tools:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnRfidStartScan" />
+
+            <!-- Error when reader not available -->
+            <TextView
+                android:id="@+id/tvRfidError"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:textColor="@color/red"
+                android:textSize="13sp"
+                android:visibility="gone"
+                tools:text="RFID reader not available"
+                tools:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnRfidStartScan" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
